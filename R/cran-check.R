@@ -235,6 +235,18 @@ display_functions <- function(x) {
 #' @returns A character vector of function names
 #'
 #' @export
+#'
+#' @examplesIf FALSE
+#' my_pkg_dir <- "path/to/my/package"
+#'
+#' # Single checks
+#' check_missing_returns(my_pkg_dir)
+#' check_return_tag_usage(my_pkg_dir)
+#' check_describeIn_usage(my_pkg_dir)
+#' check_missing_examples_tag(my_pkg_dir)
+#' check_missing_examples_content(my_pkg_dir)
+#' check_missing_title(my_pkg_dir)
+#'
 check_missing_examples_tag <- function(pkg_dir) {
     blocks <- read_documentation(pkg_dir)
 
@@ -342,9 +354,14 @@ check_missing_returns <- function(pkg_dir) {
 #' @param error_on_fail Logical. If `TRUE`, stops execution if any issue is
 #'   found.
 #'
-#' @return An object of class `"releaser_doc_check"` containing
+#' @returns An object of class `"releaser_doc_check"` containing
 #' a named list of detected issues.
 #' @export
+#' @examplesIf FALSE
+#' my_pkg_dir <- "path/to/my/package"
+#'
+#' # Full check
+#' results <- check_docs(my_pkg_dir)
 check_docs <- function(
     pkg_dir = ".",
     verbose = interactive(),
@@ -376,7 +393,13 @@ check_docs <- function(
     return(invisible(results))
 }
 
+#' @title Display result of documentation check
+#'
+#' @param x `releaser_doc_check` object
+#' @param ... Not used argument.
+#'
 #' @export
+#' @returns invisibly the object `x`
 print.releaser_doc_check <- function(x, ...) {
     cat("Documentation checks\n")
     cat("====================\n\n")
