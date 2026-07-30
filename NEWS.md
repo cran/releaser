@@ -4,8 +4,19 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-
 ## [Unreleased]
+
+### Changed
+
+* The argument `enabled` is removed from `set_rjdverse_remotes`. Now the function only enable the Remotes field.
+
+### Deprecated
+
+* `update_news_md` is deprecated. Please use the project [heylogs](https://github.com/nbbrd/heylogs) from the [nbbrd](https://github.com/nbbrd/) instead.
+* `get_changes` is deprecated. Please use the project [heylogs](https://github.com/nbbrd/heylogs) from the [nbbrd](https://github.com/nbbrd/) instead.
+
+
+## [1.2.0] - 2026-07-02
 
 ### Added
 
@@ -14,7 +25,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Fixed
 
 * Remove examples tested if PAT not provided.
-
 
 ## [1.1.0] - 2026-03-11
 
@@ -25,7 +35,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Fixed
 
 * url of GitHub repo with desc pkg.
-
 
 ## [1.0.0] - 2025-10-29
 
@@ -45,7 +54,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 * New functions to modify the DESCRIPTION and NEWS.md files for release
 * Implemented progress and diagnostic messages when `verbose = TRUE` to aid debugging and transparency.
 
-
-[Unreleased]: https://github.com/TanguyBarthelemy/releaser/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/TanguyBarthelemy/releaser/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/TanguyBarthelemy/releaser/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/TanguyBarthelemy/releaser/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/TanguyBarthelemy/releaser/releases/tag/v1.0.0
